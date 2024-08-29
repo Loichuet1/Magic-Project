@@ -6,7 +6,7 @@ import { cleanCardName } from '../../utils/Utils';
 function CreateCardInDeck({ card, openDetails, type }) {
 
     return (
-        <Link to={`/cardDetails/${cleanCardName(card.name)}`}>
+        <Link to={`/cardDetails/${cleanCardName(card.name)}`} className='cardInDeckLink'>
             <img
                 className={type === "land" ? "landCard" : "deckCard"}
                 onClick={() => openDetails(card)}
