@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { EditText, EditTextarea } from 'react-edit-text';
 import CreateCardInDeck from './CardInDeck'
 import DeckSearchModal from './DeckSearchModal'
+import DeckLogo from '/src/assets/DeckLogo.png'
 import 'react-edit-text/dist/index.css';
 
 import '../../SCSS_File/flexboxDeck.scss'
@@ -70,7 +71,7 @@ function DisplayDeck({ deckBuilder }) {
 
     return (
         <>
-            <img src="src\assets\DeckLogo.png" className='modalButtonInNav' onClick={() => { setModalOpen(!isModalOpen); closeCardDetail() }}></img>
+            <img src={DeckLogo} className='modalButtonInNav' onClick={() => { setModalOpen(!isModalOpen); closeCardDetail() }}></img>
 
             {/* Modal*/}
             {isModalOpen && (

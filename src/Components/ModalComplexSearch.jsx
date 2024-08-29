@@ -1,6 +1,37 @@
 
 import React, { useState, useEffect } from 'react';
 
+// Color logos
+import FireLogo from '/src/assets/FireLogo.png';
+import WaterLogo from '/src/assets/WaterLogo.png';
+import SwampLogo from '/src/assets/SwampLogo.png';
+import ForestLogo from '/src/assets/ForestLogo.png';
+import PlainLogo from '/src/assets/PlaineLogo.png';
+
+// Mana cost logos
+import ManaCost0 from '/src/assets/ManaCost0.png';
+import ManaCost1 from '/src/assets/ManaCost1.png';
+import ManaCost2 from '/src/assets/ManaCost2.png';
+import ManaCost3 from '/src/assets/ManaCost3.png';
+import ManaCost4 from '/src/assets/ManaCost4.png';
+import ManaCost5 from '/src/assets/ManaCost5.png';
+import ManaCost6 from '/src/assets/ManaCost6.png';
+import ManaCost7 from '/src/assets/ManaCost7.png';
+import ManaCost8 from '/src/assets/ManaCost8.png';
+import ManaCost9 from '/src/assets/ManaCost9.png';
+import ManaCost10 from '/src/assets/ManaCost10.png';
+import ManaCost11 from '/src/assets/ManaCost11.png';
+import ManaCost12 from '/src/assets/ManaCost12.png';
+import ManaCost13 from '/src/assets/ManaCost13.png';
+import ManaCost14 from '/src/assets/ManaCost14.png';
+import ManaCost15 from '/src/assets/ManaCost15.png';
+import ManaCost16 from '/src/assets/ManaCost16.png';
+
+// Ratity Logos
+import CommonLogo from '/src/assets/CommonLogo.png';
+import UncommonLogo from '/src/assets/UncommonLogo.png';
+import RareLogo from '/src/assets/RareLogo.png';
+import MythicLogo from '/src/assets/MythicLogo.png';
 
 function ModalComplexSearch({ search, parentValues }) {
 
@@ -19,6 +50,7 @@ function ModalComplexSearch({ search, parentValues }) {
     const [selectedCost, setSelectedCost] = useState(null);
 
     const handleCostClick = (cmc) => {
+
         if (selectedCost === cmc) {
             setSelectedCost(null); // Deselect the current cost if it's clicked again
 
@@ -37,6 +69,7 @@ function ModalComplexSearch({ search, parentValues }) {
     const [selectedRarity, setSelectedRarity] = useState(null);
 
     const handleRarityClick = (rarity) => {
+
         if (selectedRarity === rarity) {
             setSelectedRarity(null); // Deselect the current Rarity if it's clicked again
 
@@ -135,21 +168,21 @@ function ModalComplexSearch({ search, parentValues }) {
             <div className='modalFlexbox'>
                 <div className='flexBoxSearchButtons'>
                     <p> Color : </p>
-                    <img className={fireLogoState ? 'logoButtonSelected' : 'logoButton'} src="src\assets\FireLogo.png" alt='logoFeu' onClick={() => { SearchByColor("colorIdentity", "R"); setFireLogoState(!fireLogoState) }}></img>
-                    <img className={waterLogoState ? 'logoButtonSelected' : 'logoButton'} src="src\assets\WaterLogo.png" alt='logoEau' onClick={() => { SearchByColor("colorIdentity", "U"); setWaterLogoState(!waterLogoState) }}></img>
-                    <img className={swampLogoState ? 'logoButtonSelected' : 'logoButton'} src="src\assets\SwampLogo.png" alt='logoMarais' onClick={() => { SearchByColor("colorIdentity", "B"); setSwampLogoState(!swampLogoState) }}></img>
-                    <img className={forestLogoState ? 'logoButtonSelected' : 'logoButton'} src="src\assets\ForestLogo.png" alt='logoForet' onClick={() => { SearchByColor("colorIdentity", "G"); setForestLogoState(!forestLogoState) }}></img>
-                    <img className={plainLogoState ? 'logoButtonSelected' : 'logoButton'} src="src\assets\PlaineLogo.png" alt='logoPlaine' onClick={() => { SearchByColor("colorIdentity", "W"); setPlainLogoState(!plainLogoState) }}></img>
+                    <img className={fireLogoState ? 'logoButtonSelected' : 'logoButton'} src={FireLogo} alt='logoFeu' onClick={() => { SearchByColor("colorIdentity", "R"); setFireLogoState(!fireLogoState) }}></img>
+                    <img className={waterLogoState ? 'logoButtonSelected' : 'logoButton'} src={WaterLogo} alt='logoEau' onClick={() => { SearchByColor("colorIdentity", "U"); setWaterLogoState(!waterLogoState) }}></img>
+                    <img className={swampLogoState ? 'logoButtonSelected' : 'logoButton'} src={SwampLogo} alt='logoMarais' onClick={() => { SearchByColor("colorIdentity", "B"); setSwampLogoState(!swampLogoState) }}></img>
+                    <img className={forestLogoState ? 'logoButtonSelected' : 'logoButton'} src={ForestLogo} alt='logoForet' onClick={() => { SearchByColor("colorIdentity", "G"); setForestLogoState(!forestLogoState) }}></img>
+                    <img className={plainLogoState ? 'logoButtonSelected' : 'logoButton'} src={PlainLogo} alt='logoPlaine' onClick={() => { SearchByColor("colorIdentity", "W"); setPlainLogoState(!plainLogoState) }}></img>
 
 
                 </div>
                 <div className='flexBoxSearchButtons'>
                     <p> Cost :</p>
-                    {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map(value => (
+                    {[ManaCost0, ManaCost1, ManaCost2, ManaCost3, ManaCost4, ManaCost5, ManaCost6, ManaCost7, ManaCost8, ManaCost9, ManaCost10, ManaCost11, ManaCost12, ManaCost13, ManaCost14, ManaCost15, ManaCost16].map((ManaCostImage, value) => (
                         <img
                             key={value}
                             className={selectedCost === value ? 'logoButtonSelected' : 'logoButton'}
-                            src={`src/assets/ManaCost${value}.png`}
+                            src={ManaCostImage}
                             alt={value}
                             onClick={() => { handleCostClick(value) }}
                         />
@@ -158,11 +191,11 @@ function ModalComplexSearch({ search, parentValues }) {
 
                 <div className='flexBoxSearchButtons'>
                     <p> Rarity :</p>
-                    {["Common", "Uncommon", "Rare", "Mythic"].map(value => (
+                    {[{ value: "Common", logo: CommonLogo }, { value: "Uncommon", logo: UncommonLogo }, { value: "Rare", logo: RareLogo }, { value: "Mythic", logo: MythicLogo }].map(({ value, logo }) => (
                         <img
                             key={value}
                             className={selectedRarity === value ? 'logoButtonSelected' : 'logoButton'}
-                            src={`src/assets/${value}Logo.png`}
+                            src={logo}
                             alt={value}
                             onClick={() => { handleRarityClick(value) }}
                         />
