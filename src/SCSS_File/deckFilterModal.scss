@@ -7,6 +7,7 @@
     height: 8vh;
     width: 100vw;
     gap: 1vw;
+    padding: 1vw;
 
 }
 
@@ -21,15 +22,22 @@
     }
 
     .filterButton {
+        display: flex;
+        align-items: center;
         height: 3vh;
-        border-radius: 10%;
+        border-radius: 0.5vw;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border: 0.25rem solid white;
         font-weight: bolder;
+        padding: 0.7rem;
     }
 
     .filterButtonSelected {
+        display: flex;
+        align-items: center;
+        padding: 0.7rem;
         height: 3vh;
-        border-radius: 10%;
+        border-radius: 0.5vw;
         border: 0.25rem solid rgb(219, 172, 52);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: bolder;
