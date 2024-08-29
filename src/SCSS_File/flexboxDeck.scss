@@ -1,0 +1,169 @@
+.modal {
+  position: fixed;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  top: 50%;
+  left: 50%;
+  width: 95vw;
+  height: 85vh;
+  transform: translate(-50%, -55%);
+  z-index: 1000;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 5%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: -5px -5px 1px rgb(150, 150, 150);
+
+  p {
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .flexboxNameInput {
+    display: flex;
+    align-items: center;
+    margin-left: 1vw;
+    width: 50%;
+  }
+
+  .nameTittle {
+    width: 10vw;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+  }
+
+  .input {
+    width: 100%;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .inputText {
+    width: 25%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+
+.flexboxButtons {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100%;
+
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.flexboxDeck {
+  display: flex;
+  overflow-y: auto;
+  height: 95%;
+  width: 100%;
+  background-color: rgba(1, 1, 1, 0.877);
+}
+
+.cardZone {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(50px, 100px);
+  height: 100%;
+  width: 85%;
+  margin-top: 1vh;
+
+  img {
+    border-radius: 21px;
+  }
+}
+
+/* Ajustement de la grille pour les écrans de taille moyenne */
+@media screen and (max-width: 1950px) {
+  .cardZone {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+/* Ajustement de la grille pour les écrans de taille moyenne */
+@media screen and (max-width: 1800px) {
+  .cardZone {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+
+
+/* Ajustement de la grille pour les écrans de petite taille */
+@media screen and (max-width: 1600px) {
+  .cardZone {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Ajustement de la grille pour les écrans de très petite taille */
+@media screen and (max-width: 1350px) {
+  .cardZone {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Ajustement de la grille pour les écrans de très petite taille */
+@media screen and (max-width: 1050px) {
+  .cardZone {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Ajustement de la grille pour les écrans de très petite taille */
+@media screen and (max-width: 800px) {
+  .cardZone {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Ajustement de la grille pour les écrans de très petite taille */
+@media screen and (max-width: 550px) {
+  .cardZone {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.landZone {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(50px, 100px);
+  height: 100%;
+  width: 15%;
+  margin-top: 1vh;
+
+  img {
+    border-radius: 21px;
+  }
+}
+
+.deckCard {
+  height: 250px;
+  width: 200px;
+}
+
+.landCard {
+  margin-left: 15%;
+  height: 250px;
+  width: 200px;
+}

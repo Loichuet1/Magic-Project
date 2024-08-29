@@ -1,0 +1,85 @@
+.flexbox {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.flexbox p {
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  height: 130px;
+  background-color: black;
+
+  .pageArrow {
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
+  }
+
+  p {
+    color: white;
+    font-size: 30px;
+  }
+}
+
+.flexboxCard {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  height: 27rem;
+  width: 15rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    object-fit: contain;
+  }
+}
+
+.flexboxCardNotAvailable {
+  display: flex;
+  filter: grayscale(1);
+  gap: 20px;
+  flex-direction: column;
+  height: 27rem;
+  width: 15rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.flexBoxCardElements {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+
+  .cardCountSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  p {
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+}

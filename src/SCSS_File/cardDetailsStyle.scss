@@ -1,0 +1,252 @@
+h1 {
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.cardDetailBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: 5vw;
+    gap: 5rem;
+
+    .cardDetail {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 3rem;
+        height: 80vh;
+
+        .imageContainer {
+            position: relative;
+            width: 25vw;
+            height: 31vw;
+
+            .detailMainImage {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .returnButton {
+                border: 5px solid black;
+                border-radius: 10rem;
+                padding: 1rem;
+                width: 3vw;
+                height: 3vw;
+                background-color: white;
+
+                position: absolute;
+                bottom: -2vw;
+                left: 40%;
+                cursor: pointer;
+            }
+        }
+
+        .textSection {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: start;
+            justify-content: start;
+            text-align: start;
+            width: 40%;
+
+            .cardName {
+                font-size: 3vw;
+                font-weight: bolder;
+            }
+
+            .cardText {
+                font-size: 1vw;
+                font-weight: bolder;
+                background-color: rgb(221, 221, 221);
+                border-radius: 0.5rem;
+                padding: 2rem;
+                width: calc(100% - 4rem);
+            }
+
+            .cmc_Type {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                gap: 2rem;
+                justify-content: start;
+                align-items: center;
+
+                .costSymbolsFlexbox {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+
+                    .costSymbol {
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
+            }
+        }
+
+        .legality_marketPlaceSection {
+
+            display: flex;
+            flex-direction: column;
+            width: 35%;
+            height: 100%;
+
+            .legalitySection {
+
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: calc(100% - 4rem);
+                padding: 1rem;
+                gap: 5px;
+                box-sizing: border-box;
+                width: 100%;
+                justify-content: start;
+
+                .legalityItem {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 0.5rem;
+                    justify-content: start;
+                    width: 12vw;
+
+                    .legalIcon {
+                        min-width: 3rem;
+                        padding: 2px;
+                        border-radius: 2px;
+                        color: white;
+                        font-size: x-small;
+                    }
+
+                    .set {
+                        font-weight: bold;
+                        text-transform: capitalize;
+                        font-size: x-small;
+                    }
+                }
+            }
+
+            .marketPlaceSection {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                height: 40%;
+                width: calc(100% - 4rem);
+                padding: 2rem;
+                gap: 2rem;
+
+                .marketPlace {
+                    width: 10vw;
+                    height: 4vw;
+                    cursor: pointer;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+
+    .addToDeckSection {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        padding: 2rem;
+
+        .cardCountSection {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+    }
+
+    .printListSection {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        width: calc(100%);
+
+        .cardPriceSection {
+            display: flex;
+            flex-direction: column;
+
+
+            .cardPriceHeader {
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+                gap: 1rem;
+                background-color: rgb(207, 207, 207);
+                padding: 1rem;
+                border-top-left-radius: 1rem;
+                border-top-right-radius: 1rem;
+
+                .setIcon {
+                    object-fit: contain;
+                    width: 3vw;
+                    height: 3vw;
+                }
+            }
+
+            .cardPriceList {
+                padding: 1rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1rem;
+                background-color: rgb(241, 241, 241);
+
+                .printItem {
+                    display: flex;
+                    align-items: center;
+                    gap: 5vw;
+                    cursor: default;
+
+                    .set {
+                        width: 2rem;
+                        height: 2rem;
+                        object-fit: contain;
+                    }
+
+                    .cardPrice {
+                        text-align: start;
+                        font-size: larger;
+                        font-weight: bold;
+                    }
+                }
+
+
+                .marketPlaceSection {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 2rem;
+
+                    .marketPlace {
+                        object-fit: contain;
+                        width: 6rem;
+                        height: 6rem;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .hoveredCard {
+        position: fixed;
+        z-index: 100;
+        pointer-events: none;
+        width: 20vw;
+        height: 20vw;
+        object-fit: contain;
+    }
+}
